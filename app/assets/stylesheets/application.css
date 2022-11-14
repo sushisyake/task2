@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+.error{
+  border: 3px solid red;
+  width:40%;
+  background-color: #f1f1f1;
+}
+
+.er_text{
+  background-color: red;
+  color:white;
+}
+
+.head{
+  margin:30px;
+}

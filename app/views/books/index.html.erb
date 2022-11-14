@@ -1,5 +1,5 @@
-<h1>Books</h1>
-<%# @books.each do |book| %>
+<div class=head>
+<h1>Book</h1>
 
 <table class="teble">
   <thead>
@@ -26,12 +26,14 @@
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>errors prohibited this book from being saved:
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
+  <div class = error>
+    <div class = er_text><%= @book.errors.count %>errors prohibited this book from being saved:</div>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
   <h4>Title</h4>
@@ -44,6 +46,4 @@
   <%= f.submit 'Create Book' %>
   
 <% end %>
-
- <!--<td> <%#= link_to book.title, "/books/#{book.id}" %></td>-->
-      <!--<td> <%#= link_to book.body, "/books/#{book.id}" %></td>-->
+</div>
